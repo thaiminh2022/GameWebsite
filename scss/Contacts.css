@@ -1,0 +1,286 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: black;
+  background: linear-gradient(95deg, #1a2124 0%, #302f2f 100%);
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 3%;
+  top: 0;
+  left: 0;
+  background-color: #191e2b;
+}
+
+header li,
+header a,
+header button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+
+header .logo {
+  cursor: pointer;
+  color: #ff6139;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: xx-large;
+  margin-right: auto;
+}
+
+header .nav_links {
+  list-style: none;
+}
+
+header .nav_links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+header .nav_links li a {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+header .nav_links li a:hover {
+  color: #00a8ff;
+}
+
+header button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: #44bd32;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+header button:hover {
+  background-color: rgba(68, 189, 50, 0.8);
+}
+
+.contact {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-size: cover;
+}
+
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact .content h2 {
+  font-size: 69px;
+  font-weight: 500;
+  color: white;
+}
+
+.contact .content p {
+  font-weight: 250;
+  color: white;
+  font-size: 1.3em;
+}
+
+.contact .container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+.contact .container .contact_info {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .container .contact_info .box {
+  position: relative;
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .container .contact_info .box .icon {
+  min-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  background-color: white;
+}
+
+.contact .container .contact_info .box .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 300;
+  color: white;
+}
+
+.contact .container .contact_info .box .text h3 {
+  font-weight: 500;
+  color: #00bcd4;
+}
+
+.contact .container .contact_info .box .text a {
+  text-decoration: none;
+  color: white;
+}
+
+.contact .contact_form {
+  width: 40%;
+  padding: 40px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.contact .contact_form h2 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #333;
+}
+
+.contact .contact_form .input_box {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contact .contact_form .input_box input, .contact .contact_form .input_box textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contact .contact_form .input_box input:focus ~ span, .contact .contact_form .input_box input:valid ~ span, .contact .contact_form .input_box textarea:focus ~ span, .contact .contact_form .input_box textarea:valid ~ span {
+  color: #00a8ff;
+  font-size: 12px;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.contact .contact_form .input_box span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: #666;
+}
+
+.contact .contact_form .input_box input[type="submit"] {
+  width: 100px;
+  padding: 10px;
+  font-size: 18px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #00bcd4;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 991px) {
+  .contact {
+    padding: 50px;
+  }
+  .contact .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .container .contact_info {
+    margin-bottom: 40px;
+  }
+  .contact .container .contact_info, .contact .container .contact_form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 397px) {
+  header .logo {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Contacts.css.map */

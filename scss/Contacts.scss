@@ -1,0 +1,251 @@
+@import "./varibles/_varibles.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    // background-color: $background_main;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: black;
+    background: linear-gradient(95deg, rgb(26, 33, 36) 0%, rgb(48, 47, 47) 100%);
+
+}
+
+
+// Header / Navbar decotaion
+// ! Will change at sometime
+header {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 3%;
+    top: 0;
+    left: 0;
+
+    background-color: $background_main;
+
+    li,
+    a,
+    button {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        color: $text_main;
+        text-decoration: none;
+        border: none;
+    }
+
+    .logo {
+        cursor: pointer;
+        color: $text_lookAtMe;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        font-size: xx-large;
+        margin-right: auto;
+
+    }
+
+    .nav_links {
+        list-style: none;
+
+        li {
+            display: inline-block;
+            padding: 0 20px;
+
+            a {
+                transition: all 0.3s ease 0s;
+
+                &:hover {
+                    color: $text_hover;
+
+                }
+            }
+        }
+    }
+
+    button {
+        margin-left: 20px;
+        padding: 9px 25px;
+        background-color: $button_color;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            background-color: rgba($color: $button_color, $alpha: .8)
+        }
+
+    }
+}
+
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-size: cover;
+
+    .content{
+        max-width: 800px;
+        text-align: center;
+
+        h2{
+            font-size: 69px;
+            font-weight: 500;
+            color: white;
+        }
+        p{
+            font-weight: 250;
+            color:white;
+            font-size: 1.3em;         
+        }
+
+    }
+
+    .container{
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+
+        .contact_info {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            .box {
+                position: relative;
+                padding: 20px 0px;
+                display: flex;
+            
+                .icon {
+                    min-width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    font-size: 22px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: black;
+                    background-color: white;
+                }
+
+                .text{
+                    display: flex;
+                    margin-left: 20px;
+                    font-size: 16px;
+                    flex-direction: column;
+                    font-weight: 300;
+                    color:white;
+                
+
+                    h3{
+                        font-weight: 500;
+                        color: #00bcd4;
+
+                    }
+
+                    a{
+                        text-decoration: none;
+                        color:white;
+                    }
+                }
+
+            }
+        }   
+    }
+
+    .contact_form{
+        width: 40%;
+        padding: 40px;
+        background-color: white;
+        border-radius: 5px;
+
+        h2{
+            font-size: 30px;
+            font-weight: 500;
+            color: #333;
+        }
+        .input_box{
+            position: relative;
+            width:100%;
+            margin-top: 10px;
+
+            input, textarea{
+                width:100%;
+                padding: 5px 0;
+                font-size: 16px;
+                margin: 10px 0;
+                border: none;
+                border-bottom: 2px solid #333;
+                outline: none;
+                resize: none;
+
+                &:focus~span, &:valid~span{
+                    color: $text_hover;
+                    font-size: 12px;
+                    transform: translateY(-20px);
+                }
+            }
+
+            span{
+                position:absolute;
+                left:0;
+                padding: 5px 0;
+                font-size: 16px;
+                margin: 10px 0;
+                pointer-events: none;
+                transition: all 0.3s ease 0s;
+                color: #666;
+
+            }
+
+            input[type="submit"]{
+                width: 100px;
+                padding: 10px;
+                font-size: 18px;
+                margin: 10px 0;
+                border: none;
+                border-radius: 5px;
+                background-color: #00bcd4;
+                color: white;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+}
+
+@media(max-width: 991px){
+    .contact{
+        padding: 50px;
+        .container{
+            flex-direction: column;
+            .contact_info{
+                margin-bottom: 40px;
+            }
+            .contact_info, .contact_form{
+                width: 100%;
+            }
+        }
+    }
+}
+@media(max-width: 397px){
+    header{
+        .logo{
+            display: none;
+        }
+    }
+}
