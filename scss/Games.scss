@@ -86,15 +86,21 @@ header {
 }
 
 .game_card{
-    min-width: 100%;
-    min-height:100vh; 
+    width: 100%;
+    height:100vh; 
     // center this
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    .background_image{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
     .card{
         width: 80%;
@@ -106,15 +112,18 @@ header {
         justify-content: center;
 
         border-radius: 30px;
-        background: url("../images/coding.jpg");
-        background-size: cover;
-        background-position: center;
+        background: url("../images/main_game.jpg") no-repeat center center;
+        background-size:auto;
         color: white;
+        border-radius: 30px;
+
 
         .card_content{
             display: flex;
             flex-direction: column;
+            background: rgba($color: #000000, $alpha: .1f);
             .texts {
+                
                 h3 {
                     font-size: 5rem;
                     font-weight: 600;
@@ -141,65 +150,124 @@ header {
                     height: 5rem;
                     color: white;
                     border: 3px solid white;
+                    cursor:pointer;
                 }
             }
         }
     
     }
 }
-
 .more_card{
-    width: 100%;
+    width:100%;
     height: 100vh;
-    color:black;
-
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
+    color:white;
+
+    h2{
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 
     .more_box{
-        background: white;
-        width: 400px;
-        height: 800px;
-
-        border-radius: 20px;
-
+        width:80%;
+        height: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: top;
+        background-color: white;
+        margin: 2rem 2rem;
 
-        margin-top: 30px;
-    }
-
-    img{
-        width: 300px;
-        height: 80%;
-        object-fit: cover;
-        margin-top: 5px;
-        align-self: center;
         border-radius: 30px;
 
+        .texts {
+            color: black;
+            text-align: center;
+            align-self: center;
+            width: 50%;
+        
+            h3 {
+                font-size: 2rem;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+        
+            p {
+                font-size: 1.5rem;
+                font-weight: 400;
+                margin-bottom: 20px;
+            }
+        
+            button {
+                font-size: larger;
+                background: white;
+                border-radius: 5px;
+                padding: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                filter: drop-shadow(5px 5px 1px black);
+                cursor: pointer;
+            }
+        }
+    }
+    img{
+        width: 50%;
+        height: 100%;
+        object-fit: 100%;
+        border-radius: 30px;
+        align-self: center;
     }
 
-    .texts{
-        margin:0px 10px;
+    #Humita{
+        img{
+            background: url("../images/Heading/SVG/background.svg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
     }
+    
 }
 
 
 
 @media (max-width: 961px) {
+    
+    .more_card{
+        height: 200vh;
+    }
     .card{
         display: flex;
         flex-direction: column;
         text-align: center;
     }
-    
-    .more_card{
+    .more_box{
         flex-direction: column;
+        img{
+            width: 100%;
+            margin-top: 10px;
+        }
+        // Change the text sizes
+        .texts{
+            min-width: 100%;
+            h3{
+                font-size: 3rem;
+                font-weight: 600;
+                margin-bottom: 20px;
+                margin: 0px;
+            }
+            p{
+                font-size: 1rem;
+                font-weight: 400;
+                margin:0px;
+            }
+
+            button{
+                margin: 15px 0px;
+            }
+        }
     }
+    
 }
 @media (max-width: 648px) {
     
